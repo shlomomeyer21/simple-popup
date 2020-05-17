@@ -43,7 +43,8 @@ html, body {
 }
 
 .popup {
-    width: 450px;
+    width: 50%;
+    height: 50%;
     border-radius: 10px;
     background-color: #FFFFFF;
     box-shadow: 0 50px 30px 0 rgba(0, 0, 0, 0.1);
@@ -51,6 +52,8 @@ html, body {
     flex-direction: column;
     align-items: center;
     position: relative;
+
+    --section-height: 50px;
 }
 
 .popup-container .popup .x-button {
@@ -70,7 +73,8 @@ html, body {
 }
 
 .popup-container .popup .title {
-    height: 50px;
+    min-height: var(--section-height);
+    height: var(--section-height);
     width: 100%;
     border-radius: 10px 10px 0 0;
     background-color: #EFFFD5;
@@ -86,17 +90,25 @@ html, body {
 }
 
 .popup-container .popup .content {
-    height: 150px;
-    display: flex;
     align-items: center;
     margin: auto;
     color: #333333;
     font-size: 18px;
     letter-spacing: -0.23px;
-    padding: 15px;
+    padding: 15px 30px;
+    height: calc(100% - var(--section-height) * 3);
+    overflow: auto;
+    text-align: center;
 }
 
-.popup-container .popup .next-button {
+.popup-container .popup .next-button-container,
+.popup-container .popup .cancel-button-container {
+    min-height: var(--section-height);
+    display: flex;
+    align-items: center;
+}
+
+.popup-container .popup .next-button-container .next-button {
     height: 24px;
     min-width: 100px;
     color: #FFFFFF;
@@ -111,11 +123,10 @@ html, body {
     cursor: pointer;
 }
 
-.popup-container .popup .cancel-button {
+.popup-container .popup .cancel-button-container .cancel-button {
     color: #007DF0;
     font-size: 16px;
     letter-spacing: -0.4px;
     text-transform: capitalize;
-    margin: 25px auto;
     cursor: pointer;
 }

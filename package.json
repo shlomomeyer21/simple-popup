@@ -1,0 +1,26 @@
+{
+  "name": "simple-popup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "dependencies": {
+    "@babel/core": "^7.9.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "scripts": {
+    "build": "babel src -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shlomomeyer21/simple-popup.git"
+  },
+  "author": "Shlomo Meyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shlomomeyer21/simple-popup/issues"
+  },
+  "homepage": "https://github.com/shlomomeyer21/simple-popup#readme"
+}
