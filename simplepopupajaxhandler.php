@@ -1,3 +1,4 @@
+<?php
 abstract class AJAXHandler
 {
 public function handleRequest()
@@ -36,4 +37,3 @@ echo "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te
 
 $handler = new SimplePopupAJAXHandler();
 $handler->handleRequest();
-
